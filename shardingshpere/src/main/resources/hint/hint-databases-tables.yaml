@@ -1,0 +1,44 @@
+dataSources:
+  ds3: !!com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ds3
+    username: root
+    password: 123456
+  ds4: !!com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ds4
+    username: root
+    password: 123456
+  ds5: !!com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ds5
+    username: root
+    password: 123456
+
+
+shardingRule:
+  tables:
+    health_record:
+      actualDataNodes: ds$->{3..5}.health_record$->{0..2}
+      databaseStrategy:
+        hint:
+          algorithmClassName: com.shardingsphere.hint.MatchHintShardingAlgorithm
+      tableStrategy:
+        hint:
+          algorithmClassName: com.shardingsphere.hint.MatchHintShardingAlgorithm
+    health_task:
+      actualDataNodes: ds$->{3..5}.health_task$->{0..2}
+  bindingTables:
+    - health_record,health_task
+  broadcastTables:
+    - health_level
+
+  defaultDatabaseStrategy:
+    inline:
+      shardingColumn: user_id
+      algorithmExpression: ds$->{user_id % 3 + 3}
+  defaultTableStrategy:
+    none:
+
+props:
+  sql.show: true

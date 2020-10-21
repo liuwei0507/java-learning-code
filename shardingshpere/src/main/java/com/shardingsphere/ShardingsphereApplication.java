@@ -19,12 +19,10 @@ class ShardingsphereApplication {
 
     public static void main(String[] args) {
         try (ConfigurableApplicationContext applicationContext = SpringApplication.run(ShardingsphereApplication.class, args)) {
-//            UserService userService = applicationContext.getBean(UserService.class);
-//            HealthRecordService healthRecordService = applicationContext.getBean(HealthRecordService.class);
+            UserService userService = applicationContext.getBean(UserService.class);
 //            userService.processUsers();
-//            healthRecordService.processHealthRecords();
-//            List<User> users = userService.getUsers();
-//            System.out.println(users);
+            List<User> users = userService.getUsers();
+            System.out.println(users);
 
 //        	HealthLevelService healthLevelService = applicationContext.getBean(HealthLevelService.class);
 //        	healthLevelService.processLevels();
@@ -32,8 +30,8 @@ class ShardingsphereApplication {
 //        	HealthRecordService healthRecordService = applicationContext.getBean(HealthRecordService.class);
 //        	healthRecordService.processHealthRecords();
 
-        	HintService hintService = applicationContext.getBean(HintService.class);
-        	hintService.processWithHintValueForShardingDatabases();
+//        	HintService hintService = applicationContext.getBean(HintService.class);
+//        	hintService.processWithHintValueForShardingDatabases();
 //        	hintService.processWithHintValueForShardingDatabasesAndTables();
 //        	hintService.processWithHintValueMaster();
         } catch (Exception e) {

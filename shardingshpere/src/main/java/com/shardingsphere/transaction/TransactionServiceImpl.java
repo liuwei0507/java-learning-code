@@ -36,7 +36,9 @@ public class TransactionServiceImpl implements TransactionService {
 
     @Override
     public void processWithBASE() throws SQLException {
+        TransactionTypeHolder.set(TransactionType.BASE);
 
+        insertHealthRecords();
     }
 
     private List<Long> insertHealthRecords() throws SQLException {

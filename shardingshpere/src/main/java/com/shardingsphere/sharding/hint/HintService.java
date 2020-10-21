@@ -1,4 +1,4 @@
-package com.shardingsphere.hint;
+package com.shardingsphere.sharding.hint;
 
 import java.io.IOException;
 import java.sql.SQLException;

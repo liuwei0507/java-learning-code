@@ -1,10 +1,10 @@
-package com.shardingsphere.service.impl;
+package com.shardingsphere.sharding.service.impl;
 
-import com.shardingsphere.entity.HealthRecord;
-import com.shardingsphere.entity.HealthTask;
-import com.shardingsphere.repository.HealthRecordRepository;
-import com.shardingsphere.repository.HealthTaskRepository;
-import com.shardingsphere.service.HealthRecordService;
+import com.shardingsphere.sharding.entity.HealthRecord;
+import com.shardingsphere.sharding.entity.HealthTask;
+import com.shardingsphere.sharding.repository.HealthRecordRepository;
+import com.shardingsphere.sharding.repository.HealthTaskRepository;
+import com.shardingsphere.sharding.service.HealthRecordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

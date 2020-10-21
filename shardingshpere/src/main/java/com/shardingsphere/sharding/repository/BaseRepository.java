@@ -1,4 +1,4 @@
-package com.shardingsphere.repository;
+package com.shardingsphere.sharding.repository;
 
 import java.sql.SQLException;
 import java.util.List;

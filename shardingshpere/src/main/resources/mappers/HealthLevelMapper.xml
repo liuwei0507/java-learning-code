@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.shardingsphere.repository.HealthLevelRepository">
-    <resultMap id="healthLevelMap" type="com.shardingsphere.entity.HealthLevel">
+<mapper namespace="com.shardingsphere.sharding.repository.HealthLevelRepository">
+    <resultMap id="healthLevelMap" type="com.shardingsphere.sharding.entity.HealthLevel">
         <result column="level_id" property="levelId" jdbcType="INTEGER"/>
         <result column="level_name" property="levelName" jdbcType="VARCHAR"/>
     </resultMap>

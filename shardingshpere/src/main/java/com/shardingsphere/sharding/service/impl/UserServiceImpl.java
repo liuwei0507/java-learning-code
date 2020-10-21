@@ -1,8 +1,8 @@
-package com.shardingsphere.service.impl;
+package com.shardingsphere.sharding.service.impl;
 
-import com.shardingsphere.entity.User;
-import com.shardingsphere.repository.UserRepository;
-import com.shardingsphere.service.UserService;
+import com.shardingsphere.sharding.entity.User;
+import com.shardingsphere.sharding.repository.UserRepository;
+import com.shardingsphere.sharding.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

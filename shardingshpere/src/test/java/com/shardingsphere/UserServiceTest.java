@@ -1,6 +1,6 @@
 package com.shardingsphere;
 
-import com.shardingsphere.service.UserService;
+import com.shardingsphere.sharding.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

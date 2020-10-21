@@ -1,4 +1,4 @@
-package com.shardingsphere.service;
+package com.shardingsphere.sharding.service;
 
 import java.sql.SQLException;
 

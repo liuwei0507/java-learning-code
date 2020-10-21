@@ -1,4 +1,4 @@
-package com.shardingsphere.hint;
+package com.shardingsphere.sharding.hint;
 
 import org.apache.shardingsphere.api.hint.HintManager;
 

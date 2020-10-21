@@ -1,8 +1,8 @@
-package com.shardingsphere.service.impl;
+package com.shardingsphere.sharding.service.impl;
 
-import com.shardingsphere.entity.HealthLevel;
-import com.shardingsphere.repository.HealthLevelRepository;
-import com.shardingsphere.service.HealthLevelService;
+import com.shardingsphere.sharding.entity.HealthLevel;
+import com.shardingsphere.sharding.repository.HealthLevelRepository;
+import com.shardingsphere.sharding.service.HealthLevelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

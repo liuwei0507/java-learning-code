@@ -1,4 +1,4 @@
-package com.shardingsphere.entity;
+package com.shardingsphere.sharding.entity;
 
 public class HealthLevel {
 

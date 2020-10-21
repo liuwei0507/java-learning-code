@@ -22,10 +22,10 @@ shardingRule:
       actualDataNodes: ds$->{3..5}.health_record$->{0..2}
       databaseStrategy:
         hint:
-          algorithmClassName: com.shardingsphere.hint.MatchHintShardingAlgorithm
+          algorithmClassName: com.shardingsphere.sharding.hint.MatchHintShardingAlgorithm
       tableStrategy:
         hint:
-          algorithmClassName: com.shardingsphere.hint.MatchHintShardingAlgorithm
+          algorithmClassName: com.shardingsphere.sharding.hint.MatchHintShardingAlgorithm
     health_task:
       actualDataNodes: ds$->{3..5}.health_task$->{0..2}
   bindingTables:

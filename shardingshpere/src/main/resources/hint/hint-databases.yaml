@@ -23,7 +23,7 @@ shardingRule:
 
   defaultDatabaseStrategy:
     hint:
-      algorithmClassName: com.shardingsphere.hint.MatchHintShardingAlgorithm
+      algorithmClassName: com.shardingsphere.sharding.hint.MatchHintShardingAlgorithm
   defaultTableStrategy:
     none:
 

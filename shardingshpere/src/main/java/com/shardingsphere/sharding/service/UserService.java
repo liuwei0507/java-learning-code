@@ -1,6 +1,6 @@
-package com.shardingsphere.service;
+package com.shardingsphere.sharding.service;
 
-import com.shardingsphere.entity.User;
+import com.shardingsphere.sharding.entity.User;
 
 import java.sql.SQLException;
 import java.util.List;

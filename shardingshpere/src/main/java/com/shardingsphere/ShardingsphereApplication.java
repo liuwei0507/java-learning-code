@@ -1,19 +1,15 @@
 package com.shardingsphere;
 
-import com.shardingsphere.entity.User;
-import com.shardingsphere.hint.HintService;
-import com.shardingsphere.service.HealthRecordService;
-import com.shardingsphere.service.UserService;
+import com.shardingsphere.sharding.entity.User;
+import com.shardingsphere.sharding.service.UserService;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
 
-@MapperScan(basePackages = "com.shardingsphere.repository")
+@MapperScan(basePackages = "com.shardingsphere.sharding.repository")
 @SpringBootApplication
 class ShardingsphereApplication {
 

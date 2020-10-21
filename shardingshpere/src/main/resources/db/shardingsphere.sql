@@ -44,3 +44,15 @@ CREATE TABLE `user` (
   `user_id` bigint(20) NOT NULL,
   `user_name` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for encrypt_user
+-- ----------------------------
+DROP TABLE IF EXISTS `encrypt_user`;
+CREATE TABLE `encrypt_user` (
+  `user_id` bigint(20) NOT NULL,
+  `user_name` varchar(255) DEFAULT NULL,
+  `user_name_plain` varchar(255) DEFAULT NULL,
+  `pwd` varchar(255) DEFAULT NULL,
+  `assisted_query_pwd` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

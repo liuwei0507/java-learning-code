@@ -11,6 +11,7 @@
         <mapper resource="mappers/HealthRecordMapper.xml"/>
         <mapper resource="mappers/HealthTaskMapper.xml"/>
         <mapper resource="mappers/HealthLevelMapper.xml"/>
+        <mapper resource="mappers/EncryptUserMapper.xml"/>
     </mappers>
 </configuration>
 

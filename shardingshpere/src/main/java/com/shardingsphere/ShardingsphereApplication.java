@@ -1,8 +1,7 @@
 package com.shardingsphere;
 
-import com.shardingsphere.sharding.entity.User;
-import com.shardingsphere.sharding.service.UserService;
-import com.shardingsphere.transaction.TransactionService;
+import com.shardingsphere.sharding.entity.EncryptUser;
+import com.shardingsphere.sharding.service.EncryptUserService;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -32,8 +31,14 @@ class ShardingsphereApplication {
 //        	hintService.processWithHintValueForShardingDatabasesAndTables();
 //        	hintService.processWithHintValueMaster();
 
-            TransactionService transactionService = applicationContext.getBean(TransactionService.class);
-            transactionService.processWithXA();
+//            TransactionService transactionService = applicationContext.getBean(TransactionService.class);
+//            transactionService.processWithXA();
+
+            EncryptUserService encryptUserService = applicationContext.getBean(EncryptUserService.class);
+//            encryptUserService.processEncryptUsers();
+            List<EncryptUser> encryptUsers = encryptUserService.getEncryptUsers();
+            System.out.println(encryptUsers);
+
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -12,7 +12,7 @@ b.mybatis-config.xml
 a.  'org.apache.shardingsphere:sharding-jdbc-spring-boot-starter:4.0.0-RC1'以上版本会报错
     Property 'sqlSessionFactory' or 'sqlSessionTemplate' are required
 
-b. lambok在此版本下不可用，原因还不清楚
+b. lambok在此版本下不可用，原因还不清楚 --- 行为：没有任何报错，gradle build的时候会报错
 
 2）配置问题
 需要配置默认的datasourcename

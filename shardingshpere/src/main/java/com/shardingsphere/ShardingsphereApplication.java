@@ -1,7 +1,9 @@
 package com.shardingsphere;
 
 import com.shardingsphere.sharding.entity.EncryptUser;
+import com.shardingsphere.sharding.entity.User;
 import com.shardingsphere.sharding.service.EncryptUserService;
+import com.shardingsphere.sharding.service.UserService;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,10 +17,10 @@ class ShardingsphereApplication {
 
     public static void main(String[] args) {
         try (ConfigurableApplicationContext applicationContext = SpringApplication.run(ShardingsphereApplication.class, args)) {
-//            UserService userService = applicationContext.getBean(UserService.class);
+            UserService userService = applicationContext.getBean(UserService.class);
 //            userService.processUsers();
-//            List<User> users = userService.getUsers();
-//            System.out.println(users);
+            List<User> users = userService.getUsers();
+            System.out.println(users);
 
 //        	HealthLevelService healthLevelService = applicationContext.getBean(HealthLevelService.class);
 //        	healthLevelService.processLevels();
@@ -34,10 +36,10 @@ class ShardingsphereApplication {
 //            TransactionService transactionService = applicationContext.getBean(TransactionService.class);
 //            transactionService.processWithXA();
 
-            EncryptUserService encryptUserService = applicationContext.getBean(EncryptUserService.class);
+//            EncryptUserService encryptUserService = applicationContext.getBean(EncryptUserService.class);
 //            encryptUserService.processEncryptUsers();
-            List<EncryptUser> encryptUsers = encryptUserService.getEncryptUsers();
-            System.out.println(encryptUsers);
+//            List<EncryptUser> encryptUsers = encryptUserService.getEncryptUsers();
+//            System.out.println(encryptUsers);
 
         } catch (Exception e) {
             e.printStackTrace();
